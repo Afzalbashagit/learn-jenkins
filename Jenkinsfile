@@ -27,6 +27,11 @@ pipeline{
            sh 'echo person- ${PERSON}'
         }
       }
+      stage('Two'){
+      steps{
+       sh 'env'
+      }
+      }
    }
       post {
            always {
