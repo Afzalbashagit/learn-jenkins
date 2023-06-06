@@ -30,7 +30,7 @@ pipeline{
       stage('Two'){
       when{
         expression{
-         GIT_BRANCH="origin/test"
+         GIT_BRANCH=="origin/test"
         }
       }
       steps{
