@@ -7,6 +7,9 @@ pipeline{
     options {
            ansiColor('xterm')
        }
+   parameters {
+               string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+        }
    environment {
           SAMPLE_URL="example.com"
        }
@@ -16,6 +19,7 @@ pipeline{
            sh 'echo hello world'
            sh 'echo hello universe'
            sh 'echo ${SAMPLE_URL}'
+           sh 'echo person- ${PERSON}'
         }
       }
    }
