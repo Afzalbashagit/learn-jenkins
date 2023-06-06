@@ -16,6 +16,10 @@ pipeline{
        }
    stages{
       stage('one'){
+         input {
+                      message "Do you approve?"
+                      ok "Yes"
+                }
         steps{
            sh 'echo hello world'
            sh 'echo hello universe'
